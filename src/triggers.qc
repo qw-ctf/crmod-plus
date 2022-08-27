@@ -622,6 +622,17 @@ void() hurt_touch =
 		self.hurt_nextthink = time + 1;
 		// 1998-07-03 hurt_touch fix by Robert Field  end
 	}
+    else
+    {
+        if (other.classname == "item_flag_team1" || other.classname == "item_flag_team2")
+        {
+            other.super_time = time;
+        }
+        else if (other.classname == "rune")
+        {
+            other.nextthink = time;
+        }
+    }
 	return;
 };
 
