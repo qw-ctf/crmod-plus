@@ -30,5 +30,6 @@ jobs:
         with:
           name: crmod-plus
           path: |
+            release/*
             src/progs.dat
-            src/crprogs.dat            
+            src/csprogs.dat            
