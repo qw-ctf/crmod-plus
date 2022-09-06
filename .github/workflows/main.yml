@@ -26,10 +26,13 @@ jobs:
       - name: Compile CRMod Plus
         run: ./fteqcc64 -src src
 
+      - name: Collect artifacts
+        run: |
+          mv src/progs.dat release/
+          mv src/csprogs.dat release/
+
       - uses: actions/upload-artifact@v3
         with:
           name: crmod-plus
           path: |
             release/*
-            src/progs.dat
-            src/csprogs.dat            
